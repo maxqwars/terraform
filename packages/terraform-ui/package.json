@@ -29,6 +29,7 @@
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.1",
     "@types/react": "^18.0.24",
+    "@types/styled-components": "^5.1.26",
     "babel-jest": "^29.2.2",
     "babel-loader": "^8.2.5",
     "jest": "^29.2.2",
@@ -46,5 +47,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "dependencies": {}
+  "dependencies": {
+    "styled-components": "^5.3.6"
+  }
 }

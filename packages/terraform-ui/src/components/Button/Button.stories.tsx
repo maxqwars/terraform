@@ -1,16 +1,23 @@
-import React from "react"
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Button from './'
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import Button from "./";
 
 export default {
-    title: "TerraformUI Button",
-    component: Button
-} as ComponentMeta<typeof Button>
+  title: "TerraformUI Button",
+  component: Button,
+} as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
+const Template: ComponentStory<typeof Button> = (args) => (
+  <Button {...args}>Button</Button>
+);
 
-export const HelloWorld = Template.bind({})
+export const DefaultButton = Template.bind({});
+export const DangerButton = Template.bind({});
 
-HelloWorld.args = {
-    label: "This is Hello World button"
-}
+DefaultButton.args = {
+  variant: "default",
+};
+
+DangerButton.args = {
+  variant: "danger",
+};

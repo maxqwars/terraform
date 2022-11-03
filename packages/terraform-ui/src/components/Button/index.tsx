@@ -1,13 +1,42 @@
-import React from "react";
+// import React from "react";
+
+// type Props = {
+//   label: string;
+// };
+
+// const index = (props: Props) => {
+//   const { label } = props;
+
+//   return <button>{label}</button>;
+// };
+
+// export default index;
+
+import styled from "styled-components";
+import { LIGHT_COLORS_PALETTE } from "../../constants";
 
 type Props = {
-  label: string;
+  variant: "default" | "danger" | "success" | "disable";
 };
 
-const index = (props: Props) => {
-  const { label } = props;
+function selectBgColor(variant: "default" | "danger" | "success" | "disable") {
+  switch (variant) {
+    case "danger": {
+      return LIGHT_COLORS_PALETTE.red;
+    }
+    default: {
+      return LIGHT_COLORS_PALETTE.blue;
+    }
+  }
+}
 
-  return <button>{label}</button>;
-};
+const Button = styled.button<Props>`
+  background: ${(props) => selectBgColor(props.variant)};
+  color: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 32px;
+`;
 
-export default index;
+export default Button;
