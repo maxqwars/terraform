@@ -11,13 +11,9 @@ const Template: ComponentStory<typeof Button> = (args) => (
   <Button {...args}>Button</Button>
 );
 
-export const DefaultButton = Template.bind({});
-export const DangerButton = Template.bind({});
+export const UIButton = Template.bind({});
 
-DefaultButton.args = {
-  variant: "default",
-};
-
-DangerButton.args = {
-  variant: "danger",
+UIButton.args = {
+  variant: "primary",
+  label: "Button",
 };

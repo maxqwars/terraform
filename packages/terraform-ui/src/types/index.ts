@@ -1,1 +1,2 @@
-export { ColorsPalette } from './ColorsPalette'
+export { ColorsPalette } from "./ColorsPalette";
+export { Theme } from "./Theme";
